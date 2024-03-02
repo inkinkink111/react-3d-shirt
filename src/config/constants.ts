@@ -1,6 +1,7 @@
 import { swatch, fileIcon, ai, logoShirt, stylishShirt } from "../assets";
+import { Tab } from "./model";
 
-export const EditorTabs = [
+export const EditorTabs: Tab[] = [
   {
     name: "colorpicker",
     icon: swatch,
@@ -15,7 +16,7 @@ export const EditorTabs = [
   },
 ];
 
-export const FilterTabs = [
+export const FilterTabs: Tab[] = [
   {
     name: "logoShirt",
     icon: logoShirt,

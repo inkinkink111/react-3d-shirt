@@ -1,6 +1,6 @@
 export const downloadCanvasToImage = () => {
   const canvas = document.querySelector("canvas");
-  const dataURL = canvas.toDataURL();
+  const dataURL = canvas!.toDataURL();
   const link = document.createElement("a");
 
   link.href = dataURL;
@@ -10,14 +10,14 @@ export const downloadCanvasToImage = () => {
   document.body.removeChild(link);
 };
 
-export const reader = (file) =>
+export const reader = (file: Blob) =>
   new Promise((resolve, reject) => {
     const fileReader = new FileReader();
     fileReader.onload = () => resolve(fileReader.result);
     fileReader.readAsDataURL(file);
   });
 
-export const getContrastingColor = (color) => {
+export const getContrastingColor = (color: string) => {
   // Remove the '#' character if it exists
   const hex = color.replace("#", "");
 
